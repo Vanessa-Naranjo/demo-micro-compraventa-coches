@@ -5,7 +5,7 @@ public class ClienteDto {
 	private String nombres;
 	private String primerApellido;
 	private String segundoApellido;
-	private Integer codigoCliente;
+	private String codigoCliente;
 
 	public String getNombres() {
 		return nombres;
@@ -31,11 +31,11 @@ public class ClienteDto {
 		this.segundoApellido = segundoApellido;
 	}
 
-	public Integer getCodigoCliente() {
+	public String getCodigoCliente() {
 		return codigoCliente;
 	}
 
-	public void setCodigoCliente(Integer codigoCliente) {
+	public void setCodigoCliente(String codigoCliente) {
 		this.codigoCliente = codigoCliente;
 	}
 }

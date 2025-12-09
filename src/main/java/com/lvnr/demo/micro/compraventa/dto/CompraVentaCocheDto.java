@@ -2,6 +2,10 @@ package com.lvnr.demo.micro.compraventa.dto;
 
 import java.time.LocalDate;
 
+import com.lvnr.demo.micro.compraventa.dto.auto.AutoDto;
+import com.lvnr.demo.micro.compraventa.dto.cliente.ClienteDto;
+import com.lvnr.demo.micro.compraventa.dto.vendedores.VendedorDto;
+
 public class CompraVentaCocheDto {
 
 	private String codigoFactura;
@@ -10,6 +14,9 @@ public class CompraVentaCocheDto {
 	private String matricula;
 	private String tipoTransaccion;
 	private LocalDate fechaTransaccion;
+	private AutoDto autoDto;
+	private ClienteDto clienteDto;
+	private VendedorDto vendedorDto;
 
 	public String getCodigoFactura() {
 		return codigoFactura;
@@ -57,6 +64,30 @@ public class CompraVentaCocheDto {
 
 	public void setFechaTransaccion(LocalDate fechaTransaccion) {
 		this.fechaTransaccion = fechaTransaccion;
+	}
+
+	public AutoDto getAutoDto() {
+		return autoDto;
+	}
+
+	public void setAutoDto(AutoDto autoDto) {
+		this.autoDto = autoDto;
+	}
+
+	public ClienteDto getClienteDto() {
+		return clienteDto;
+	}
+
+	public void setClienteDto(ClienteDto clienteDto) {
+		this.clienteDto = clienteDto;
+	}
+
+	public VendedorDto getVendedorDto() {
+		return vendedorDto;
+	}
+
+	public void setVendedorDto(VendedorDto vendedorDto) {
+		this.vendedorDto = vendedorDto;
 	}
 
 }

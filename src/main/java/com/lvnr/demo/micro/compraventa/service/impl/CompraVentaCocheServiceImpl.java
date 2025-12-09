@@ -66,12 +66,20 @@ public class CompraVentaCocheServiceImpl implements CompraVentaCocheService {
 
 		for (CompraVentaCocheEntity compraVentaCocheEntity : compraVentaCochesEntity) {
 			CompraVentaCocheDto compraVentaCocheDto = new CompraVentaCocheDto();
+			
+			AutoDto autoDto = clienteServiceRest.consultarAuto(compraVentaCocheEntity.getMatricula());
+			ClienteDto clienteDto=clienteServiceRest.consultarCliente(compraVentaCocheEntity.getCodigoCliente());
+			VendedorDto vendedorDto=clienteServiceRest.consultarVendedor(compraVentaCocheEntity.getCodigoVendedor());
+			
 			compraVentaCocheDto.setCodigoFactura(compraVentaCocheEntity.getCodigoFactura());
 			compraVentaCocheDto.setTipoTransaccion(compraVentaCocheEntity.getTipoTransaccion());
 			compraVentaCocheDto.setFechaTransaccion(compraVentaCocheEntity.getFechaTransaccion());
 			compraVentaCocheDto.setCodigoCliente(compraVentaCocheEntity.getCodigoCliente());
 			compraVentaCocheDto.setCodigoVendedor(compraVentaCocheEntity.getCodigoVendedor());
 			compraVentaCocheDto.setMatricula(compraVentaCocheEntity.getMatricula());
+			compraVentaCocheDto.setAutoDto(autoDto);
+			compraVentaCocheDto.setClienteDto(clienteDto);
+			compraVentaCocheDto.setVendedorDto(vendedorDto);
 
 			compraVentaCochesDto.add(compraVentaCocheDto);
 		}

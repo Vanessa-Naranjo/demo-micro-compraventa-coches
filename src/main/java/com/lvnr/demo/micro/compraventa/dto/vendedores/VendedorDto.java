@@ -6,7 +6,7 @@ public class VendedorDto {
 	private String nombres;
 	private String primerApellido;
 	private String segundoApellido;
-	private Integer codigoVendedor;
+	private String codigoVendedor;
 
 
 	public String getNombres() {
@@ -33,11 +33,11 @@ public class VendedorDto {
 		this.segundoApellido = segundoApellido;
 	}
 
-	public Integer getCodigoVendedor() {
+	public String getCodigoVendedor() {
 		return codigoVendedor;
 	}
 
-	public void setCodigoVendedor(Integer codigoVendedor) {
+	public void setCodigoVendedor(String codigoVendedor) {
 		this.codigoVendedor = codigoVendedor;
 	}
 
